@@ -33,4 +33,4 @@ Flags:
 
 ## Example
 
-![alt text](./assets/example.png =620)
+![alt text](./assets/example.png)
