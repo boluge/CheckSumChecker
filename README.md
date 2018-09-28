@@ -1,8 +1,8 @@
 # CheckSumChecker CLI
 
-![alt text](https://img.shields.io/badge/go-lang-lightgrey.svg)
-![alt text](https://img.shields.io/badge/build-passing-brightgreen.svg)
-![alt text](https://img.shields.io/badge/cli-tool-ff69b4.svg)
+![alt text](https://img.shields.io/badge/go-lang-blue.svg)
+![alt text](https://img.shields.io/badge/cli-tool-red.svg)
+![alt text](https://img.shields.io/badge/open-source-lightgrey.svg)
 
 This application allows to calculate file checksum, to check them and this for different formats like :
 [md5, sha1, sha256, sha512]
