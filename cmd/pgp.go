@@ -15,56 +15,32 @@
 package cmd
 
 import (
-	"crypto/sha512"
 	"fmt"
-	"io"
-	"log"
-	"os"
 
 	"github.com/spf13/cobra"
 )
 
-// sha512Cmd represents the sha512 command
-var sha512Cmd = &cobra.Command{
-	Use:   "sha512",
-	Short: "Application to check file Sha512 checksum",
+// pgpCmd represents the pgp command
+var pgpCmd = &cobra.Command{
+	Use:   "pgp",
+	Short: "Application to check file pgp checksum",
 	Long: `The Application allows to calculate file checksum, to check them and this for different formats like :
 	md5, sha1, sha256, pgp.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		if source == "" {
-			fmt.Println("You must add a file path")
-		} else {
-			hash := getSha512Hash()
-			showResult(hash, key)
-		}
+		fmt.Println("pgp called")
 	},
 }
 
-// getHash return the hash of a file
-func getSha512Hash() string {
-	f, err := os.Open(source)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer f.Close()
-
-	h := sha512.New()
-	if _, err := io.Copy(h, f); err != nil {
-		log.Fatal(err)
-	}
-	return fmt.Sprintf("%x", h.Sum(nil))
-}
-
 func init() {
-	rootCmd.AddCommand(sha512Cmd)
+	rootCmd.AddCommand(pgpCmd)
 
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	// sha512Cmd.PersistentFlags().String("foo", "", "A help for foo")
+	// pgpCmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// sha512Cmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// pgpCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }

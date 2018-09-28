@@ -29,7 +29,7 @@ var sha1Cmd = &cobra.Command{
 	Use:   "sha1",
 	Short: "Application to check file Sha1 checksum",
 	Long: `The Application allows to calculate file checksum, to check them and this for different formats like :
-	md5, sha1, sha256.`,
+	md5, sha1, sha256, pgp.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		if source == "" {
 			fmt.Println("You must add a file path")

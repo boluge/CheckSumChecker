@@ -34,7 +34,7 @@ var rootCmd = &cobra.Command{
 	Short: "Application to check file checksum",
 	Long: `This application allows to calculate file checksum,
 to check them and this for different formats like :
-[md5, sha1, sha256, sha512]`,
+[md5, sha1, sha256, sha512, pgp]`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	//Run: func(cmd *cobra.Command, args []string) { },
